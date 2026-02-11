@@ -1,0 +1,38 @@
+name: Weekly Marketing Content
+
+on:
+  schedule:
+    # Runs every Monday at 9:00 AM UTC
+    - cron: "0 9 * * 1"
+  workflow_dispatch:
+    inputs:
+      prompt:
+        description: "Custom prompt for the marketing agent"
+        required: false
+        default: "Draft this week's social media posts for all platforms"
+
+jobs:
+  generate-content:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Generate content
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: |
+          PROMPT="${{ github.event.inputs.prompt || 'Draft this week''s social media posts for all platforms. Include LinkedIn, X/Twitter, and Discord.' }}"
+          python -m src.cli --prompt "$PROMPT" --output output/weekly-content.md
+
+      - name: Upload content artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: weekly-content-${{ github.run_number }}
+          path: output/weekly-content.md

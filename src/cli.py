@@ -1,5 +1,6 @@
-"""Interactive CLI for the marketing agent."""
+"""Interactive and non-interactive CLI for the marketing agent."""
 
+import argparse
 import sys
 from pathlib import Path
 
@@ -36,10 +37,44 @@ Your **Senior Marketing Manager** is ready.
 """
 
 
+def _parse_args():
+    parser = argparse.ArgumentParser(description="Brand Marketing Agent")
+    parser.add_argument("--config", type=Path, help="Path to brand config YAML")
+    parser.add_argument("--prompt", type=str, help="Run non-interactively with this prompt")
+    parser.add_argument("--output", type=str, help="Save output to file (non-interactive mode)")
+    return parser.parse_args()
+
+
+def _run_non_interactive(args):
+    """Run the agent with a single prompt and exit."""
+    try:
+        agent = MarketingAgent(config_path=args.config)
+    except FileNotFoundError as e:
+        print(f"Error: {e}", file=sys.stderr)
+        sys.exit(1)
+
+    try:
+        response = agent.chat(args.prompt)
+    except Exception as e:
+        print(f"Error: {e}", file=sys.stderr)
+        sys.exit(1)
+
+    if args.output:
+        Path(args.output).parent.mkdir(parents=True, exist_ok=True)
+        Path(args.output).write_text(response)
+        print(f"Output saved to {args.output}")
+    else:
+        print(response)
+
+
 def main():
-    config_path = None
-    if len(sys.argv) > 1:
-        config_path = Path(sys.argv[1])
+    args = _parse_args()
+
+    if args.prompt:
+        _run_non_interactive(args)
+        return
+
+    config_path = args.config
 
     console.print(Panel(Markdown(WELCOME), border_style="cyan", title="[brand]Marketing Agent[/brand]"))
 

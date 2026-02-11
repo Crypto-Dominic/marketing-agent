@@ -1,0 +1,13 @@
+[project]
+name = "marketing-agent"
+version = "0.1.0"
+description = "AI-powered Senior Marketing Manager agent for brand strategy and execution"
+requires-python = ">=3.10"
+dependencies = [
+    "anthropic>=0.39.0",
+    "pyyaml>=6.0",
+    "rich>=13.0",
+]
+
+[project.scripts]
+marketing-agent = "src.cli:main"

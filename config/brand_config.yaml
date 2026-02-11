@@ -1,0 +1,98 @@
+# =============================================================================
+# Brand Configuration
+# =============================================================================
+# Fill in your brand details below. The marketing agent uses this as its
+# single source of truth for all brand-related decisions and content.
+# =============================================================================
+
+brand:
+  name: "Your Brand Name"
+  tagline: "Your brand tagline"
+  mission: "Your brand mission statement"
+  vision: "Your brand vision statement"
+  founded: 2024
+  website: "https://yourbrand.com"
+
+# Brand voice & personality
+voice:
+  tone:
+    - professional
+    - approachable
+    - confident
+  personality_traits:
+    - innovative
+    - trustworthy
+    - bold
+  writing_style: "Clear, concise, and action-oriented. Avoid jargon unless speaking to industry insiders."
+  dos:
+    - "Use active voice"
+    - "Lead with benefits, not features"
+    - "Tell stories that connect emotionally"
+  donts:
+    - "Never use ALL CAPS for emphasis"
+    - "Avoid negative language about competitors"
+    - "Don't make unsubstantiated claims"
+
+# Target audience
+audience:
+  primary:
+    description: "Describe your primary audience"
+    age_range: "25-45"
+    interests:
+      - "technology"
+      - "innovation"
+    pain_points:
+      - "Describe key pain points"
+    channels:
+      - "LinkedIn"
+      - "Twitter/X"
+      - "Email"
+  secondary:
+    description: "Describe your secondary audience"
+    age_range: "18-30"
+    interests:
+      - "social media"
+      - "trends"
+    channels:
+      - "Instagram"
+      - "TikTok"
+
+# Visual identity (for reference in content briefs)
+visual_identity:
+  primary_colors:
+    - "#000000"
+    - "#FFFFFF"
+  accent_colors:
+    - "#FF5733"
+  fonts:
+    heading: "Inter"
+    body: "Open Sans"
+  logo_usage_notes: "Always maintain clear space around the logo equal to the height of the logomark."
+
+# Products / services
+products:
+  - name: "Product One"
+    description: "Short description of product one"
+    key_benefits:
+      - "Benefit A"
+      - "Benefit B"
+    target_segment: "primary"
+  - name: "Product Two"
+    description: "Short description of product two"
+    key_benefits:
+      - "Benefit C"
+      - "Benefit D"
+    target_segment: "secondary"
+
+# Competitors (for positioning awareness)
+competitors:
+  - name: "Competitor A"
+    positioning: "Brief note on how they position themselves"
+  - name: "Competitor B"
+    positioning: "Brief note on their angle"
+
+# Key differentiators
+differentiators:
+  - "What makes your brand unique #1"
+  - "What makes your brand unique #2"
+  - "What makes your brand unique #3"

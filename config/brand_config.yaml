@@ -1,98 +1,132 @@
 # =============================================================================
 # Brand Configuration
 # =============================================================================
-# Fill in your brand details below. The marketing agent uses this as its
-# single source of truth for all brand-related decisions and content.
-# =============================================================================
 
 brand:
-  name: "Your Brand Name"
-  tagline: "Your brand tagline"
-  mission: "Your brand mission statement"
-  vision: "Your brand vision statement"
+  name: "Ace Data Cloud"
+  tagline: "Usage-First AI Infrastructure"
+  mission: "To make AI infrastructure accessible, measurable, and pay-per-use for builders, agents, and real production systems."
+  vision: "To power the global AI execution layer where systems, not subscriptions, drive value."
   founded: 2024
-  website: "https://yourbrand.com"
+  website: "https://platform.acedata.cloud"
 
 # Brand voice & personality
 voice:
   tone:
     - professional
-    - approachable
     - confident
+    - technically grounded
   personality_traits:
-    - innovative
-    - trustworthy
-    - bold
-  writing_style: "Clear, concise, and action-oriented. Avoid jargon unless speaking to industry insiders."
+    - execution-focused
+    - transparent
+    - infrastructure-driven
+  writing_style: "Clear, direct, and grounded in real usage. Speak like builders talking to builders. Avoid hype and vague buzzwords."
   dos:
-    - "Use active voice"
-    - "Lead with benefits, not features"
-    - "Tell stories that connect emotionally"
+    - "Use concrete examples of usage"
+    - "Lead with real capabilities and access"
+    - "Emphasize pay-per-use and infrastructure"
+    - "Highlight on-chain transparency where relevant"
   donts:
-    - "Never use ALL CAPS for emphasis"
-    - "Avoid negative language about competitors"
-    - "Don't make unsubstantiated claims"
+    - "Avoid generic marketing phrases"
+    - "Do not promise price appreciation"
+    - "Avoid attacking competitors directly"
+    - "Do not overuse technical jargon when speaking to non-technical users"
 
 # Target audience
 audience:
   primary:
-    description: "Describe your primary audience"
-    age_range: "25-45"
+    description: "AI builders, developers, and agent operators who need production-grade APIs and pay-per-use infrastructure."
+    age_range: "22-40"
     interests:
-      - "technology"
-      - "innovation"
+      - "AI development"
+      - "automation"
+      - "Web3 infrastructure"
+      - "API monetization"
+      - "workflow orchestration"
     pain_points:
-      - "Describe key pain points"
+      - "Managing multiple AI subscriptions"
+      - "Complex billing systems"
+      - "Fragmented AI tools"
+      - "Scaling autonomous agents with predictable costs"
     channels:
-      - "LinkedIn"
       - "Twitter/X"
-      - "Email"
+      - "Discord"
+      - "Telegram"
+      - "GitHub"
   secondary:
-    description: "Describe your secondary audience"
-    age_range: "18-30"
+    description: "Non-technical creators and product teams who want to deploy AI apps without managing infrastructure."
+    age_range: "20-35"
     interests:
-      - "social media"
-      - "trends"
+      - "AI content creation"
+      - "No-code tools"
+      - "Startup building"
+      - "Digital products"
     channels:
-      - "Instagram"
-      - "TikTok"
+      - "Twitter/X"
+      - "YouTube"
+      - "Discord"
 
 # Visual identity (for reference in content briefs)
 visual_identity:
   primary_colors:
-    - "#000000"
-    - "#FFFFFF"
+    - "#0A0F1F"      # Deep infrastructure navy
+    - "#FFFFFF"      # Clean white background
   accent_colors:
-    - "#FF5733"
+    - "#2563EB"      # Infrastructure blue
+    - "#1E40AF"      # Deep blue accent
   fonts:
     heading: "Inter"
-    body: "Open Sans"
-  logo_usage_notes: "Always maintain clear space around the logo equal to the height of the logomark."
+    body: "Inter"
+  logo_usage_notes: "Do not alter the Ace logo. Maintain clear space equal to the height of the logomark. Prefer clean white or premium gradient backgrounds."
 
 # Products / services
 products:
-  - name: "Product One"
-    description: "Short description of product one"
+  - name: "AI APIs"
+    description: "Production-grade APIs for chat, image, video, music, lyrics, and AI generation services."
     key_benefits:
-      - "Benefit A"
-      - "Benefit B"
+      - "Pay-per-use pricing"
+      - "No subscription lock-ins"
+      - "Built for workflows and agents"
+      - "Cheaper than many official provider plans"
     target_segment: "primary"
-  - name: "Product Two"
-    description: "Short description of product two"
+
+  - name: "Dify Workflows"
+    description: "Composable AI workflow orchestration enabling multi-step automation and logic chaining."
     key_benefits:
-      - "Benefit C"
-      - "Benefit D"
-    target_segment: "secondary"
+      - "Chain models and actions"
+      - "Automate conditional logic"
+      - "Agent-ready execution"
+    target_segment: "primary"
+
+  - name: "Nexior"
+    description: "Open deployment layer for launching AI-powered platforms with built-in usage tracking and monetization."
+    key_benefits:
+      - "Launch AI apps without building billing systems"
+      - "Integrated credits and usage tracking"
+      - "Forkable and extensible"
+    target_segment: "primary"
+
+  - name: "x402 Pay-Per-Use Settlement"
+    description: "Machine-to-machine USDC settlement on Base and Solana for per-request billing."
+    key_benefits:
+      - "5% discount when paying via x402"
+      - "Instant on-chain settlement"
+      - "No intermediaries"
+    target_segment: "primary"
 
 # Competitors (for positioning awareness)
 competitors:
-  - name: "Competitor A"
-    positioning: "Brief note on how they position themselves"
-  - name: "Competitor B"
-    positioning: "Brief note on their angle"
+  - name: "OpenAI Platform"
+    positioning: "Subscription-heavy, centralized API provider focused on model access rather than infrastructure orchestration."
+  - name: "Replicate"
+    positioning: "Model hosting marketplace with per-call billing but limited integrated workflow and token coordination."
+  - name: "Traditional SaaS AI tools"
+    positioning: "Feature-focused products with monthly subscriptions not optimized for agentic execution."
 
 # Key differentiators
 differentiators:
-  - "What makes your brand unique #1"
-  - "What makes your brand unique #2"
-  - "What makes your brand unique #3"
+  - "Unified AI APIs, workflows, deployment, and settlement in one infrastructure layer"
+  - "Native x402 pay-per-use support on Base and Solana"
+  - "Usage-first design instead of subscription-first pricing"
+  - "Transparent on-chain buybacks and liquidity actions"
+  - "Built for builders and autonomous AI agents, not demos"
